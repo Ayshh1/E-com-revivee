@@ -115,7 +115,7 @@ export default function CartModal() {
                   <div className="flex flex-1 items-end justify-between text-sm">
                     <button
                       type="button"
-                      className="font-medium text-yellow-600 sm:order-2"
+                      className="font-medium text-yellow-600 sm:order-2  hover:bg-gray-700 rounded-lg transition-all ease-in-out"
                       onClick={() => handleDeleteCartItem(cartItem._id)}
                     >
                       {componentLevelLoader &&
@@ -147,7 +147,7 @@ export default function CartModal() {
               router.push("/cart");
               setShowCartModal(false);
             }}
-            className="mt-1.5 w-full inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
+            className="mt-1.5 w-full inline-block bg-black text-white rounded-lg px-5 py-3 text-xs font-medium uppercase tracking-wide  hover:bg-gray-700 transition-all ease-in-out"
           >
             Go To Cart
           </button>
@@ -158,12 +158,12 @@ export default function CartModal() {
               router.push("/checkout");
               setShowCartModal(false);
             }}
-            className="mt-1.5 w-full inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide disabled:opacity-50"
+            className="mt-1.5 w-full inline-block bg-black text-white rounded-lg px-5 py-3 text-xs font-medium uppercase tracking-wide disabled:opacity-50  hover:bg-gray-700 transition-all ease-in-out"
           >
             Checkout
           </button>
           <div className="mt-6 flex justify-center text-center text-sm text-gray-600">
-            <button type="button" className="font-medium text-grey">
+            <button type="button" className="font-medium text-grey rounded-lg  hover:bg-gray-700 transition-all ease-in-out">
               Continue Shopping
               <span aria-hidden="true"> &rarr;</span>
             </button>

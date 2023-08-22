@@ -148,7 +148,7 @@ export default function AdminAddNewProduct() {
   console.log(formData);
 
   return (
-    <div className="w-full mt-5 mr-0 mb-0 ml-0 relative">
+    <div className="w-full mt-5 mr-0 mb-0 ml-0 relative ">
       <div className="flex flex-col items-start justify-start p-10 bg-white shadow-2xl rounded-xl relative">
         <div className="w-full mt-6 mr-0 mb-0 ml-0 space-y-8">
           <input
@@ -196,7 +196,7 @@ export default function AdminAddNewProduct() {
           )}
           <button
             onClick={handleAddProduct}
-            className="inline-flex w-full items-center justify-center bg-black px-6 py-4 text-lg text-white font-medium uppercase tracking-wide"
+            className="inline-flex w-full items-center justify-center rounded-lg bg-black px-6 py-4 text-lg text-white font-medium uppercase tracking-wide  hover:bg-gray-700 transition-all ease-in-out"
           >
             {componentLevelLoader && componentLevelLoader.loading ? (
               <ComponentLevelLoader

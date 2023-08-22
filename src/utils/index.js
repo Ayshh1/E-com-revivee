@@ -1,3 +1,5 @@
+
+
 export const navOptions = [
   {
     id: "home",
@@ -189,17 +191,18 @@ export const AvailableSizes = [
 ];
 
 export const firebaseConfig = {
-  apiKey: "API_KEY",
-  authDomain: "AUTH_DOMAIN",
-  projectId: "PROJECT_ID",
-  storageBucket: "STROAGE_BUCKET",
-  messagingSenderId: "MESSAGING_SENDER_ID",
-  appId: "APP_ID",
-  measurementId: "MEASUREMENT_ID",
+  apiKey: "AIzaSyArIF-BCSNSv7wpDX03GMZAxnaRPO8qtmA",
+  authDomain: "e-commerce-858f0.firebaseapp.com",
+  projectId: "e-commerce-858f0",
+  storageBucket: "e-commerce-858f0.appspot.com",
+  messagingSenderId: "190833505979",
+  appId: "1:190833505979:web:b379a7fc5fea3e0b411b9e",
+  measurementId: "G-PC7CWF7QYW"
 };
 
+
 export const firebaseStroageURL =
-  "YOUR_FIREBASE_STROAGE_URL";
+  "gs://e-commerce-858f0.appspot.com";
 
 export const addNewAddressFormControls = [
   {

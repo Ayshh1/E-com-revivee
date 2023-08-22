@@ -7,8 +7,11 @@ const AuthUser = async (req) => {
 
   if (!token) return false;
 
+  console.log(token);
+
   try {
     const extractAuthUserInfo = jwt.verify(token, "default_secret_key");
+    console.log(extractAuthUserInfo);
     if (extractAuthUserInfo) return extractAuthUserInfo;
   } catch (e) {
     console.log(e);

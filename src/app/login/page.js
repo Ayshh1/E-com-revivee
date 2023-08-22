@@ -99,8 +99,8 @@ export default function Login() {
                   ) : null
                 )}
                 <button
-                  className="disabled:opacity-50 inline-flex w-full items-center justify-center bg-black px-6 py-4 text-lg 
-                     text-white transition-all duration-200 ease-in-out focus:shadow font-medium uppercase tracking-wide
+                  className="disabled:opacity-50 rounded-lg inline-flex w-full items-center justify-center bg-black px-6 py-4 text-lg 
+                     text-white duration-200  focus:shadow font-medium uppercase tracking-wide  hover:bg-gray-700 transition-all ease-in-out
                      "
                   disabled={!isValidForm()}
                   onClick={handleLogin}
@@ -120,8 +120,8 @@ export default function Login() {
                 <div className="flex flex-col gap-2">
                   <p>New to website ?</p>
                   <button
-                    className="inline-flex w-full items-center justify-center bg-black px-6 py-4 text-lg 
-                     text-white transition-all duration-200 ease-in-out focus:shadow font-medium uppercase tracking-wide
+                    className="inline-flex w-full items-center rounded-lg justify-center bg-black px-6 py-4 text-lg 
+                     text-white  duration-200  focus:shadow font-medium uppercase tracking-wide  hover:bg-gray-700 transition-all ease-in-out
                      "
                     onClick={() => router.push("/register")}
                   >

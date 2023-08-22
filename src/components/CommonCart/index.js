@@ -54,7 +54,7 @@ export default function CommonCart({
                               </p>
                               <button
                                 type="button"
-                                className="font-medium text-yellow-700 sm:order-2"
+                                className="font-medium text-yellow-700 sm:order-2 rounded-lg hover:bg-gray-700 transition-all ease-in-out"
                                 onClick={() =>
                                   handleDeleteCartItem(cartItem._id)
                                 }
@@ -117,7 +117,7 @@ export default function CommonCart({
                   <button
                   onClick={()=>router.push('/checkout')}
                     disabled={cartItems && cartItems.length === 0}
-                    className="disabled:opacity-50 group inline-flex w-full items-center justify-center bg-black px-6 py-4 text-lg text-white font-medium uppercase tracking-wide"
+                    className="disabled:opacity-50 group inline-flex w-full items-center rounded-lg justify-center bg-black px-6 py-4 text-lg text-white font-medium uppercase tracking-wide  hover:bg-gray-700 transition-all ease-in-out"
                   >
                     Checkout
                   </button>

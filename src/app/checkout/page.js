@@ -29,7 +29,7 @@ export default function Checkout() {
   const params = useSearchParams();
 
   const publishableKey =
-    "pk_test_51NMv6ZSC6E6fnyMeRIEb9oEXdGRCC9yrBTT4xWHgcjWOuFcqFiAHErvaS50K1hl5t5WJXVGfLLWxvb705IWJhA3300yCcrMnlM";
+    "pk_test_51NgZ70BaRB0RsOJy5UnoxfU3ZroypW1ZAVRVhUArdII14wclQXn93uXExgGY5fABJgu9RwQ3rj1ZPn7efcOdJwkM00dG7C3Q6i";
   const stripePromise = loadStripe(publishableKey);
 
   console.log(cartItems);
@@ -246,7 +246,7 @@ export default function Checkout() {
                   <p>City : {item.city}</p>
                   <p>Country : {item.country}</p>
                   <p>PostalCode : {item.postalCode}</p>
-                  <button className="mt-5 mr-5 inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide">
+                  <button className="mt-5 mr-5 inline-block bg-black rounded-lg text-white px-5 py-3 text-xs font-medium uppercase tracking-wide  hover:bg-gray-700 transition-all ease-in-out">
                     {item._id === selectedAddress
                       ? "Selected Address"
                       : "Select Address"}
@@ -259,7 +259,7 @@ export default function Checkout() {
           </div>
           <button
             onClick={() => router.push("/account")}
-            className="mt-5 mr-5 inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
+            className="mt-5 mr-5 inline-block bg-black text-white rounded-lg px-5 py-3 text-xs font-medium uppercase tracking-wide  hover:bg-gray-700 transition-all ease-in-out"
           >
             Add new address
           </button>
@@ -299,7 +299,7 @@ export default function Checkout() {
                   Object.keys(checkoutFormData.shippingAddress).length === 0
                 }
                 onClick={handleCheckout}
-                className="disabled:opacity-50 mt-5 mr-5 w-full  inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
+                className="disabled:opacity-50 mt-5 mr-5 w-full rounded-lg inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide  hover:bg-gray-700 transition-all ease-in-out"
               >
                 Checkout
               </button>

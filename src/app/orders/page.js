@@ -100,14 +100,14 @@ export default function Orders() {
                           ))}
                         </div>
                         <div className="flex gap-5">
-                          <button className="disabled:opacity-50 mt-5 mr-5  inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide">
+                          <button className="disabled:opacity-50 mt-5 mr-5 rounded-lg inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide  hover:bg-gray-700 transition-all ease-in-out">
                             {item.isProcessing
                               ? "Order is Processing"
                               : "Order is delivered"}
                           </button>
                           <button
                             onClick={() => router.push(`/orders/${item._id}`)}
-                            className=" mt-5 mr-5  inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
+                            className=" mt-5 mr-5  inline-block rounded-lg bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide  hover:bg-gray-700 transition-all ease-in-out"
                           >
                             View Order Details
                           </button>

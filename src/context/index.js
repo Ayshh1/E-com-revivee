@@ -2,7 +2,7 @@
 
 import Cookies from "js-cookie";
 import { usePathname, useRouter } from "next/navigation";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect,useState} from "react";
 
 export const GlobalContext = createContext(null);
 
