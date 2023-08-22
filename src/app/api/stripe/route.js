@@ -17,8 +17,8 @@ export async function POST(req) {
         payment_method_types: ["card"],
         line_items: res,
         mode: "payment",
-        success_url: "https://fullstack-e-commerce.vercel.app/checkout" + "?status=success",
-        cancel_url: "https://fullstack-e-commerce.vercel.app/checkout" + "?status=cancel",
+        success_url: "https://e-commerce-xjyr.vercel.app/checkout" + "?status=success",
+        cancel_url: "https://e-commerce-xjyr.vercel.app/checkout" + "?status=cancel",
       });
 
       return NextResponse.json({
