@@ -8,25 +8,25 @@ export async function GET(req) {
   try {
     await connectToDB();
 
-      const extractAllproducts = await Product.find({});
+    const allProducts = await Product.find({});
 
-      if (extractAllproducts) {
-        return NextResponse.json({
-          success: true,
-          data: extractAllproducts,
-        });
-      } else {
-        return NextResponse.json({
-          success: false,
-          status: 204,
-          message: "No Products found",
-        });
-      }
+    if (allProducts.length > 0) {
+      return NextResponse.json({
+        success: true,
+        data: allProducts,
+      });
+    } else {
+      return NextResponse.json({
+        success: false,
+        status: 404,
+        message: "No Products found",
+      });
+    }
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return NextResponse.json({
       success: false,
-      message: "Something went wrong ! Please try again later",
+      message: "Something went wrong! Please try again later.",
     });
   }
 }
