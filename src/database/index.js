@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import connectionUrl from "./secret";
 
 const configOptions = {
   useNewUrlParser: true,
@@ -6,8 +7,6 @@ const configOptions = {
 };
 
 const connectToDB = async () => {
-  const connectionUrl =
-    "mongodb+srv://ayesha:YesBro%40123@mernn.oibtind.mongodb.net/";
 
   mongoose
     .connect(connectionUrl, configOptions)
