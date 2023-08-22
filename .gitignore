@@ -7,7 +7,7 @@
 secret.js
 # testing
 /coverage
-
+.env
 # next.js
 /.next/
 /out/

@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
-import connectionUrl from "./secret";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const configOptions = {
   useNewUrlParser: true,
@@ -7,7 +8,7 @@ const configOptions = {
 };
 
 const connectToDB = async () => {
-
+  const connectionUrl = process.env.url;
   mongoose
     .connect(connectionUrl, configOptions)
     .then(() => console.log("Ecommerce database connected successfully!"))
