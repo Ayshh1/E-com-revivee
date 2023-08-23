@@ -1,17 +1,16 @@
-//add a new product service
-
 import Cookies from "js-cookie";
-import dotnev from 'dotenv';
-dotnev.config();
+import dotenv from "dotenv";
 
-const apiurl = process.env.API_URL;
+dotenv.config();
+
+const apiUrl = process.env.API_URL;
 
 export const addNewProduct = async (formData) => {
   try {
-    const response = await fetch("/api/admin/add-product", {
+    const response = await fetch(`${apiUrl}/api/admin/add-product`, {
       method: "POST",
       headers: {
-        "content-type": "application/json",
+        "Content-Type": "application/json",
         Authorization: `Bearer ${Cookies.get("token")}`,
       },
       body: JSON.stringify(formData),
@@ -27,7 +26,7 @@ export const addNewProduct = async (formData) => {
 
 export const getAllAdminProducts = async () => {
   try {
-    const res = await fetch(`${apiurl}/api/admin/all-products`, {
+    const res = await fetch(`${apiUrl}/api/admin/all-products`, {
       method: "GET",
       cache: "no-store",
     });
@@ -42,10 +41,10 @@ export const getAllAdminProducts = async () => {
 
 export const updateAProduct = async (formData) => {
   try {
-    const res = await fetch("/api/admin/update-product", {
+    const res = await fetch(`${apiUrl}/api/admin/update-product`, {
       method: "PUT",
       headers: {
-        "content-type": "application/json",
+        "Content-Type": "application/json",
         Authorization: `Bearer ${Cookies.get("token")}`,
       },
       cache: "no-store",
@@ -62,12 +61,15 @@ export const updateAProduct = async (formData) => {
 
 export const deleteAProduct = async (id) => {
   try {
-    const res = await fetch(`/api/admin/delete-product?id=${id}`, {
-      method: "DELETE",
-      headers: {
-        Authorization: `Bearer ${Cookies.get("token")}`,
-      },
-    });
+    const res = await fetch(
+      `${apiUrl}/api/admin/delete-product?id=${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${Cookies.get("token")}`,
+        },
+      }
+    );
 
     const data = await res.json();
 
@@ -75,7 +77,7 @@ export const deleteAProduct = async (id) => {
   } catch (e) {
     console.log(e);
   }
-};
+}
 
 export const productByCategory = async (id) => {
   try {
