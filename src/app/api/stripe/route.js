@@ -1,10 +1,12 @@
 import AuthUser from "@/middleware/AuthUser";
 import { NextResponse } from "next/server";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const stripe = require("stripe")(
   "sk_test_51NgZ70BaRB0RsOJyvwaRxpD12iWTszenhOXL9nDqsD4SG1hVugbkABOLkPqx8cvr4C1rFrn4kb5S7JunW0VArAGP00QxH2LJR2"
 );
-
+const apiurl = process.env.API_URL;
 export const dynamic = "force-dynamic";
 
 export async function POST(req) {
@@ -17,8 +19,8 @@ export async function POST(req) {
         payment_method_types: ["card"],
         line_items: res,
         mode: "payment",
-        success_url: "https://e-commer-umber.vercel.app/checkout" + "?status=success",
-        cancel_url: "https://e-commer-umber.vercel.app/checkout" + "?status=cancel",
+        success_url: `${apiurl}/checkout" + "?status=success`,
+        cancel_url: `${apiurl}/checkout" + "?status=cancel`,
       });
 
       return NextResponse.json({

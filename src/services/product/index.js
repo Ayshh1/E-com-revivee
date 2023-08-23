@@ -1,6 +1,10 @@
 //add a new product service
 
 import Cookies from "js-cookie";
+import dotnev from 'dotenv';
+dotnev.config();
+
+const apiurl = process.env.API_URL;
 
 export const addNewProduct = async (formData) => {
   try {
@@ -23,7 +27,7 @@ export const addNewProduct = async (formData) => {
 
 export const getAllAdminProducts = async () => {
   try {
-    const res = await fetch("https://e-commer-umber.vercel.app/api/admin/all-products", {
+    const res = await fetch(`${apiurl}/api/admin/all-products`, {
       method: "GET",
       cache: "no-store",
     });
@@ -76,7 +80,7 @@ export const deleteAProduct = async (id) => {
 export const productByCategory = async (id) => {
   try {
     const res = await fetch(
-      `https://e-commer-umber.vercel.app/api/admin/product-by-category?id=${id}`,
+      `${apiurl}/api/admin/product-by-category?id=${id}`,
       {
         method: "GET",
         cache: "no-store",
@@ -94,7 +98,7 @@ export const productByCategory = async (id) => {
 export const productById = async (id) => {
   try {
     const res = await fetch(
-      `https://e-commer-umber.vercel.app/api/admin/product-by-id?id=${id}`,
+      `${apiurl}/api/admin/product-by-id?id=${id}`,
       {
         method: "GET",
         cache: "no-store",

@@ -1,4 +1,8 @@
 import Cookies from "js-cookie";
+import dotenv from 'dotenv';
+dotenv.config();
+
+const apiurl = process.env.API_URL;
 
 export const addToCart = async (formData) => {
   try {
@@ -21,7 +25,7 @@ export const addToCart = async (formData) => {
 
 export const getAllCartItems = async (id) => {
   try {
-    const res = await fetch(`https://e-commer-umber.vercel.app/api/cart/all-cart-items?id=${id}`, {
+    const res = await fetch(`${apiurl}/api/cart/all-cart-items?id=${id}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${Cookies.get("token")}`,
