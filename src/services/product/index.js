@@ -1,5 +1,7 @@
+//add a new product service
+
 import Cookies from "js-cookie";
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -7,10 +9,10 @@ const apiurl = process.env.API_URL;
 
 export const addNewProduct = async (formData) => {
   try {
-    const response = await fetch(`${apiurl}/api/admin/add-product`, {
+    const response = await fetch("/api/admin/add-product", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "content-type": "application/json",
         Authorization: `Bearer ${Cookies.get("token")}`,
       },
       body: JSON.stringify(formData),
@@ -26,7 +28,7 @@ export const addNewProduct = async (formData) => {
 
 export const getAllAdminProducts = async () => {
   try {
-    const res = await fetch(`${apiurl}/api/admin/all-products`, {
+    const res = await fetch(`http://localhost:3001/api/admin/all-products`, {
       method: "GET",
       cache: "no-store",
     });
@@ -41,10 +43,10 @@ export const getAllAdminProducts = async () => {
 
 export const updateAProduct = async (formData) => {
   try {
-    const res = await fetch(`${apiurl}/api/admin/update-product`, {
+    const res = await fetch("/api/admin/update-product", {
       method: "PUT",
       headers: {
-        "Content-Type": "application/json",
+        "content-type": "application/json",
         Authorization: `Bearer ${Cookies.get("token")}`,
       },
       cache: "no-store",
@@ -61,15 +63,12 @@ export const updateAProduct = async (formData) => {
 
 export const deleteAProduct = async (id) => {
   try {
-    const res = await fetch(
-      `${apiurl}/api/admin/delete-product?id=${id}`,
-      {
-        method: "DELETE",
-        headers: {
-          Authorization: `Bearer ${Cookies.get("token")}`,
-        },
-      }
-    );
+    const res = await fetch(`/api/admin/delete-product?id=${id}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${Cookies.get("token")}`,
+      },
+    });
 
     const data = await res.json();
 
@@ -77,12 +76,12 @@ export const deleteAProduct = async (id) => {
   } catch (e) {
     console.log(e);
   }
-}
+};
 
 export const productByCategory = async (id) => {
   try {
     const res = await fetch(
-      `${apiurl}/api/admin/product-by-category?id=${id}`,
+      `http://localhost:3001/api/admin/product-by-category?id=${id}`,
       {
         method: "GET",
         cache: "no-store",
@@ -100,7 +99,7 @@ export const productByCategory = async (id) => {
 export const productById = async (id) => {
   try {
     const res = await fetch(
-      `${apiurl}/api/admin/product-by-id?id=${id}`,
+      `http://localhost:3001/api/admin/product-by-id?id=${id}`,
       {
         method: "GET",
         cache: "no-store",

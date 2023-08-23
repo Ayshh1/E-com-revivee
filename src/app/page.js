@@ -13,15 +13,25 @@ export default function Home() {
   const router = useRouter();
 
   async function getListOfProducts() {
-    const res = await getAllAdminProducts();
 
-    if (res.success) {
-      setProducts(res.data);
+    try {
+      const res = await getAllAdminProducts();
+  
+      if (res.success) {
+        setProducts(res.data);
+        console.log(isAuthUser);
+      } else {
+        // Handle the case where success is not true, e.g., show an error message
+        console.error("API request did not succeed:", res.message);
+      }
+    } catch (error) {
+      console.error("API request failed:", error);
     }
   }
 
   useEffect(() => {
     getListOfProducts();
+    
   }, []);
 
   console.log(products);

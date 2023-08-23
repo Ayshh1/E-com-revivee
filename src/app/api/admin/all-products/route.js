@@ -10,7 +10,7 @@ export async function GET(req) {
 
     const allProducts = await Product.find({});
 
-    if (allProducts.length > 0) {
+    if (allProducts.length >= 0) {
       return NextResponse.json({
         success: true,
         data: allProducts,
@@ -30,3 +30,4 @@ export async function GET(req) {
     });
   }
 }
+

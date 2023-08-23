@@ -25,7 +25,7 @@ export const addToCart = async (formData) => {
 
 export const getAllCartItems = async (id) => {
   try {
-    const res = await fetch(`${apiurl}/api/cart/all-cart-items?id=${id}`, {
+    const res = await fetch(`http://localhost:3001/api/cart/all-cart-items?id=${id}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${Cookies.get("token")}`,
