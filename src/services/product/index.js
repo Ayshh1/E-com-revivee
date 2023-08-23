@@ -3,11 +3,11 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const apiUrl = process.env.API_URL;
+const apiurl = process.env.API_URL;
 
 export const addNewProduct = async (formData) => {
   try {
-    const response = await fetch(`${apiUrl}/api/admin/add-product`, {
+    const response = await fetch(`${apiurl}/api/admin/add-product`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,7 +26,7 @@ export const addNewProduct = async (formData) => {
 
 export const getAllAdminProducts = async () => {
   try {
-    const res = await fetch(`${apiUrl}/api/admin/all-products`, {
+    const res = await fetch(`${apiurl}/api/admin/all-products`, {
       method: "GET",
       cache: "no-store",
     });
@@ -41,7 +41,7 @@ export const getAllAdminProducts = async () => {
 
 export const updateAProduct = async (formData) => {
   try {
-    const res = await fetch(`${apiUrl}/api/admin/update-product`, {
+    const res = await fetch(`${apiurl}/api/admin/update-product`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -62,7 +62,7 @@ export const updateAProduct = async (formData) => {
 export const deleteAProduct = async (id) => {
   try {
     const res = await fetch(
-      `${apiUrl}/api/admin/delete-product?id=${id}`,
+      `${apiurl}/api/admin/delete-product?id=${id}`,
       {
         method: "DELETE",
         headers: {
@@ -82,7 +82,7 @@ export const deleteAProduct = async (id) => {
 export const productByCategory = async (id) => {
   try {
     const res = await fetch(
-      `${apiUrl}/api/admin/product-by-category?id=${id}`,
+      `${apiurl}/api/admin/product-by-category?id=${id}`,
       {
         method: "GET",
         cache: "no-store",
@@ -100,7 +100,7 @@ export const productByCategory = async (id) => {
 export const productById = async (id) => {
   try {
     const res = await fetch(
-      `${apiUrl}/api/admin/product-by-id?id=${id}`,
+      `${apiurl}/api/admin/product-by-id?id=${id}`,
       {
         method: "GET",
         cache: "no-store",
