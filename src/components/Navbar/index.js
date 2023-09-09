@@ -89,7 +89,7 @@ export default function Navbar() {
             onClick={() => router.push("/")}
             className="flex items-center cursor-pointer"
           >
-            <span className="slef-center text-2xl font-semibold whitespace-nowrap pl-10 w-800">
+            <span className="slef-center text-2xl font-semibold whitespace-nowrap pl-10 w-800 text-black">
             NovaNest
             </span>
           </div>
