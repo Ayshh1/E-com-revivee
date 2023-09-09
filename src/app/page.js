@@ -38,31 +38,34 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <section className="">
-        <div className="grid max-w-screen-xl px-4 py-8 mx-suto  lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <div className="mr-auto place-self-center lg:col-span-7">
-            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
-            Top-Tier Style Curation
-            </h1>
-            <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
-            Welcome to our fashion sanctuary – where style takes center stage and every ensemble is a masterpiece.
-            </p>
+      <section className="bg-white-50 px-4 py-8 sm:px-5  lg:px-6">
+  <div className="max-w-screen-xl mx-auto lg:grid lg:grid-cols-12 gap-8">
+    
+    <div className="lg:col-span-7">
+      <h1 className="text-3xl font-extrabold tracking-tight leading-none md:text-4xl lg:text-5xl xl:text-6xl">
+        Top-Tier Style Curation
+      </h1>
+      <p className="mt-4 text-gray-500 text-lg lg:text-xl">
+        Welcome to our fashion sanctuary – where style takes center stage and every ensemble is a masterpiece.
+      </p>
+      <button
+        type="button"
+        onClick={() => router.push("/product/listing/all-products")}
+        className="mt-6 inline-block px-5 py-3 text-sm font-medium uppercase text-white bg-black rounded-lg hover:bg-gray-700 transition-all ease-in-out"
+      >
+        Explore Our Collection
+      </button>
+    </div>
+    
+    <div className="flex justify-center lg:col-span-5">
+      <img
+        src="https://cdn.pixabay.com/photo/2016/11/22/21/57/apparel-1850804_1280.jpg"
+        alt="Explore Shop Collection"
+        className="object-cover w-full max-w-md rounded"
+      />
+    </div>
 
-            <button
-              type="button"
-              onClick={() => router.push("/product/listing/all-products")}
-              className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white hover:bg-gray-700 transition-all ease-in-out rounded-lg"
-            >
-              Explore Our Collection
-            </button>
-          </div>
-          <div className="hidden lg:mt-0 lg:col-span-5 lg:flex cursor-pointer transition-shadow hover:opacity-80">
-            <img
-              src="https://cdn.pixabay.com/photo/2016/11/22/21/57/apparel-1850804_1280.jpg"
-              alt="Explore Shop Collection"
-            />
-          </div>
-        </div>
+  </div>
         <div className="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch ">
             <div className="grid p-6 bg-grey-300 rounded place-content-center sm:p-8 ">
