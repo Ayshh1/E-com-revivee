@@ -42,7 +42,7 @@ export default function Home() {
   <div className="max-w-screen-xl mx-auto lg:grid lg:grid-cols-12 gap-8">
     
     <div className="lg:col-span-7">
-      <h1 className="text-3xl font-extrabold tracking-tight leading-none md:text-4xl lg:text-5xl xl:text-6xl">
+      <h1 className="text-2xl pt-5 font-extrabold tracking-tight leading-none md:text-4xl lg:text-5xl xl:text-6xl">
         Top-Tier Style Curation
       </h1>
       <p className="mt-4 text-gray-500 text-lg lg:text-xl">
@@ -51,7 +51,7 @@ export default function Home() {
       <button
         type="button"
         onClick={() => router.push("/product/listing/all-products")}
-        className="mt-6 inline-block px-5 py-3 text-sm font-medium uppercase text-white bg-black rounded-lg hover:bg-gray-700 transition-all ease-in-out"
+        className="mb-6 mt-6 inline-block px-5 py-3 text-sm font-medium uppercase text-white bg-black rounded-lg hover:bg-gray-700 transition-all ease-in-out"
       >
         Explore Our Collection
       </button>
@@ -71,7 +71,7 @@ export default function Home() {
             <div className="grid p-6 bg-grey-300 rounded place-content-center sm:p-8 ">
               <div className="max-w-md mx-auto text-center lg:text-left">
                 <div>
-                  <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
+                  <h2 className="text-xl font-bold text-gray-900 sm:text-4xl">
                     Summer Sale Collection
                   </h2>
                 </div>
