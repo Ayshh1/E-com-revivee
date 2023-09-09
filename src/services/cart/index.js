@@ -23,7 +23,7 @@ export const addToCart = async (formData) => {
 
 export const getAllCartItems = async (id) => {
   try {
-    const res = await fetch(`https://novanest-47s48ti9d-ayshh1.vercel.app/api/cart/all-cart-items?id=${id}`, {
+    const res = await fetch(`https://e-commerce-ktkc.vercel.app/api/cart/all-cart-items?id=${id}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${Cookies.get("token")}`,
