@@ -37,7 +37,7 @@ export default function Home() {
   console.log(products);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between lg:p-24 sm:p-25">
       <section className="bg-white-50 px-4 py-8 sm:px-5  lg:px-6">
   <div className="max-w-screen-xl mx-auto lg:grid lg:grid-cols-12 gap-8">
     
