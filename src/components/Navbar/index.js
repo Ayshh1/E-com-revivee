@@ -11,7 +11,7 @@ import CartModal from "../CartModal";
 function NavItems({ isModalView = false, isAdminView, router }) {
   return (
     <div
-      className={`items-center justify-between w-full md:flex md:w-auto bg-white ${
+      className={`items-center justify-between w-full md:flex md:w-auto  ${
         isModalView ? "" : "hidden"
       }`}
       id="nav-items"
