@@ -127,7 +127,7 @@ export default function Account() {
       <div className="mx-auto bg-gray-100 px-4 sm:px-6 lg:px-8">
         <div className="bg-white shadow">
           <div className="p-6 sm:p-12">
-            <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
+            <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row sm:object-cover sm:visible text-black">
               {/* we have render random user image here */}
             </div>
             <div className="flex flex-col flex-1 sm:object-cover sm:visible text-black">
@@ -140,8 +140,8 @@ export default function Account() {
             <button onClick={()=>router.push('/orders')} className="mt-5  inline-block bg-black text-white rounded-lg px-5 py-3 text-xs font-medium uppercase tracking-wide  hover:bg-gray-700 transition-all ease-in-out">
               View Your Orders
             </button>
-            <div className="mt-6">
-              <h1 className="font-bold text-lg">Your Addresses :</h1>
+            <div className="mt-6 sm:object-cover sm:visible text-black">
+              <h1 className="font-bold text-lg sm:object-cover sm:visible text-black">Your Addresses :</h1>
               {pageLevelLoader ? (
                 <PulseLoader
                   color={"#000000"}
@@ -150,7 +150,7 @@ export default function Account() {
                   data-testid="loader"
                 />
               ) : (
-                <div className="mt-4 flex flex-col gap-4">
+                <div className="mt-4 flex flex-col gap-4 sm:object-cover sm:visible text-black">
                   {addresses && addresses.length ? (
                     addresses.map((item) => (
                       <div className="border p-6" key={item._id}>
