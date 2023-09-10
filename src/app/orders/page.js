@@ -60,12 +60,12 @@ export default function Orders() {
   return (
     <section>
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mt-8 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div className="mt-8 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 sm:visible sm:object-cover text-black">
           <div>
-            <div className="px-4 py-6 sm:px-8 sm:py-10">
+            <div className="px-4 py-6 sm:px-8 sm:py-10 sm:visible sm:object-cover text-black">
               <div className="flow-root">
                 {allOrdersForUser && allOrdersForUser.length ? (
-                  <ul className="flex flex-col gap-4">
+                  <ul className="flex flex-col gap-4 sm:visible sm:object-cover text-black">
                     {allOrdersForUser.map((item) => (
                       <li
                         key={item._id}
@@ -84,7 +84,7 @@ export default function Orders() {
                             </p>
                           </div>
                         </div>
-                        <div className="flex gap-2">
+                        <div className="flex gap-2 sm:visible sm:object-cover text-black">
                           {item.orderItems.map((orderItem, index) => (
                             <div key={index} className="shrink-0">
                               <img
