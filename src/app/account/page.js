@@ -130,8 +130,8 @@ export default function Account() {
             <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
               {/* we have render random user image here */}
             </div>
-            <div className="flex flex-col flex-1">
-              <h4 className="text-lg font-semibold text-center md:text-left">
+            <div className="flex flex-col flex-1 sm:object-cover sm:visible text-black">
+              <h4 className="text-lg font-semibold text-center md:text-left sm:object-cover sm:visible text-black">
                 {user?.name}
               </h4>
               <p>{user?.email}</p>
@@ -161,7 +161,7 @@ export default function Account() {
                         <p>PostalCode : {item.postalCode}</p>
                         <button
                           onClick={() => handleUpdateAddress(item)}
-                          className="mt-5 mr-5 inline-block bg-black text-white px-5 py-3 text-xs rounded-lg font-medium uppercase tracking-wide  hover:bg-gray-700 transition-all ease-in-out"
+                          className="sm:object-cover sm:visible text-black mt-5 mr-5 inline-block bg-black text-white px-5 py-3 text-xs rounded-lg font-medium uppercase tracking-wide  hover:bg-gray-700 transition-all ease-in-out"
                         >
                           Update
                         </button>
@@ -201,8 +201,8 @@ export default function Account() {
               </button>
             </div>
             {showAddressForm ? (
-              <div className="flex flex-col mt-5 justify-center pt-4 items-center">
-                <div className="w-full mt-6 mr-0 mb-0 ml-0 space-y-8">
+              <div className="flex flex-col mt-5 justify-center pt-4 items-center sm:object-cover sm:visible text-black">
+                <div className="w-full mt-6 mr-0 mb-0 ml-0 space-y-8 sm:object-cover sm:visible text-black">
                   {addNewAddressFormControls.map((controlItem) => (
                     <InputComponent
                       type={controlItem.type}
