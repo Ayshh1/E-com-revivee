@@ -82,7 +82,7 @@ export default function AdminView() {
                       key={item._id}
                       className="bg-gray-200 shadow p-5 flex flex-col space-y-3 py-6 text-left sm:object-cover sm:visible text-black"
                     >
-                      <div className="flex">
+                      <div className="lg:flex">
                         <h1 className="font-bold text-lg mb-3 flex-1 sm:object-cover sm:visible text-black">
                           #order: {item._id}
                         </h1>
