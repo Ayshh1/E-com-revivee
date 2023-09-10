@@ -71,19 +71,19 @@ export default function AdminView() {
 
   return (
     <section>
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 sm:object-cover sm:visible text-black ">
         <div>
-          <div className="px-4 py-6 sm:px-8 sm:py-10">
+          <div className="px-4 py-6 sm:px-8 sm:py-10 sm:object-cover sm:visible text-black">
             <div className="flow-root">
               {allOrdersForAllUsers && allOrdersForAllUsers.length ? (
-                <ul className="flex flex-col gap-4">
+                <ul className="flex flex-col gap-4 sm:object-cover sm:visible text-black">
                   {allOrdersForAllUsers.map((item) => (
                     <li
                       key={item._id}
-                      className="bg-gray-200 shadow p-5 flex flex-col space-y-3 py-6 text-left"
+                      className="bg-gray-200 shadow p-5 flex flex-col space-y-3 py-6 text-left sm:object-cover sm:visible text-black"
                     >
                       <div className="flex">
-                        <h1 className="font-bold text-lg mb-3 flex-1">
+                        <h1 className="font-bold text-lg mb-3 flex-1 sm:object-cover sm:visible text-black">
                           #order: {item._id}
                         </h1>
                         <div className="flex flex-col gap-2">
