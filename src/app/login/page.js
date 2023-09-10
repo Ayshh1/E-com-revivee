@@ -81,7 +81,7 @@ export default function Login() {
               <p className="w-full text-4xl font-medium text-center font-serif">
                 Login
               </p>
-              <div className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8">
+              <div className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8 sm:object-cover sm:visible text-black">
                 {loginFormControls.map((controlItem) =>
                   controlItem.componentType === "input" ? (
                     <InputComponent
