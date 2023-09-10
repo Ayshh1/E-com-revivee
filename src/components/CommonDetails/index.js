@@ -50,8 +50,8 @@ export default function CommonDetails({ item }) {
                   />
                 </div>
               </div>
-              <div className="mt-2 w-full lg:order-1 lg:w-32 lg:flex-shrink-0">
-                <div className="flex flex-row items-start lg:flex-col">
+              <div className="mt-2 w-full lg:order-1 lg:w-32 lg:flex-shrink-0 sm:visible sm:object-cover text-black">
+                <div className="flex flex-row items-start lg:flex-col sm:visible sm:object-cover text-black">
                   <button
                     type="button"
                     className="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-gray-100 text-center  hover:bg-gray-700 transition-all ease-in-out"
@@ -76,14 +76,14 @@ export default function CommonDetails({ item }) {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-2 lg:row-span-2 lg:row-end-2">
+          <div className="lg:col-span-2 lg:row-span-2 lg:row-end-2 sm:visible sm:object-cover text-black">
             <h1 className="text-2xl font-bold text-gray-900">
               {item && item.name}
             </h1>
-            <div className="mt-10 flex flex-col items-center justify-between space-y-4 botder-t border-b py-4 sm:flex-row sm:space-y-0">
+            <div className="mt-10 flex flex-col items-center justify-between space-y-4 botder-t border-b py-4 sm:flex-row sm:space-y-0 sm:visible sm:object-cover text-black">
               <div className="flex items-end">
                 <h1
-                  className={`text-3xl font-bold mr-2 ${
+                  className={`text-3xl font-bold mr-2 sm:visible sm:object-cover text-black ${
                     item.onSale === "yes" ? "line-through" : ""
                   }`}
                 >
@@ -133,7 +133,7 @@ export default function CommonDetails({ item }) {
                   </a>
                 </nav>
               </div>
-              <div className="mt-8 flow-root sm:mt-12">
+              <div className="mt-8 flow-root sm:mt-12 sm:visible sm:object-cover text-black">
                 {item && item.description}
               </div>
             </div>
