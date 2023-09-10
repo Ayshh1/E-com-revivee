@@ -39,7 +39,7 @@ export default function OrderDetails() {
 
   if (pageLevelLoader) {
     return (
-      <div className="w-full min-h-screen flex justify-center items-center">
+      <div className="w-full min-h-screen flex justify-center items-center sm:visible sm:object-cover text-black">
         <PulseLoader
           color={"#000000"}
           loading={pageLevelLoader}
@@ -52,7 +52,7 @@ export default function OrderDetails() {
 
   return (
     <div className="py-14 px-4 md:px-6">
-      <div className="flex justify-start items-start space-y-2 flex-col">
+      <div className="flex justify-start items-start space-y-2 flex-col sm:visible sm:object-cover text-black">
         <h1 className="text-3xl lg:text-4xl font-bold leading-7 lg:leading-9 text-gray-900">
           Order #{orderDetails && orderDetails._id}
         </h1>
@@ -100,8 +100,8 @@ export default function OrderDetails() {
                 ))
               : null}
           </div>
-          <div className="flex justify-center flex-col md:flex-row items-stretch w-full space-y-4 md:space-y-0 md:space-x-5 xl:space-x-8">
-            <div className="flex flex-col px-4 py-6 md:p-6 xl:p-8 w-full bg-gray-50 space-y-6">
+          <div className="flex justify-center flex-col md:flex-row items-stretch w-full space-y-4 md:space-y-0 md:space-x-5 xl:space-x-8 sm:visible sm:object-cover text-black">
+            <div className="flex flex-col px-4 py-6 md:p-6 xl:p-8 w-full bg-gray-50 space-y-6 sm:visible sm:object-cover text-black">
               <h3 className="text-xl font-semibold leading-6 text-gray-900">
                 Summary
               </h3>
