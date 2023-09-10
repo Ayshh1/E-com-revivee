@@ -11,13 +11,13 @@ import CartModal from "../CartModal";
 function NavItems({ isModalView = false, isAdminView, router }) {
   return (
     <div
-      className={`items-center justify-between w-full md:flex md:w-auto ${
+      className={`items-center justify-between w-full md:flex md:w-auto bg-white ${
         isModalView ? "" : "hidden"
       }`}
       id="nav-items"
     >
       <ul
-        className={`flex flex-col p-4 md:p-0 mt-4 font-medium  rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0  bg-gray-50 ${
+        className={`flex flex-col p-4 md:p-0 mt-4 font-medium  rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0  ${
           isModalView ? "border-none" : "border border-gray-100"
         }`}
       >
