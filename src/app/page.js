@@ -42,7 +42,7 @@ export default function Home() {
   <div className="max-w-screen-xl mx-auto lg:grid lg:grid-cols-12 gap-8">
     
     <div className="lg:col-span-7">
-      <h1 className="text-2xl pt-5 font-extrabold tracking-tight leading-none md:text-4xl lg:text-5xl xl:text-6xl">
+      <h1 className="text-2xl pt-5 font-extrabold tracking-tight leading-none md:text-4xl lg:text-5xl xl:text-6xl object-cover">
         Top-Tier Style Curation
       </h1>
       <p className="mt-4 text-gray-500 text-lg lg:text-xl">
