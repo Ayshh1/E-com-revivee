@@ -37,12 +37,12 @@ export default function Home() {
   console.log(products);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between lg:p-24 sm:p-25">
+    <main className="flex min-h-screen flex-col items-center justify-between lg:p-24 sm:p-25.5">
       <section className="bg-white-50 px-4 py-8 sm:px-5  lg:px-6">
   <div className="max-w-screen-xl mx-auto lg:grid lg:grid-cols-12 gap-8">
     
     <div className="lg:col-span-7">
-      <h1 className="pt-5 text-2xl font-extrabold tracking-tight leading-none md:text-4xl lg:text-5xl xl:text-6xl object-cover visible sm:block">
+      <h1 className="pt-5 text-4xl font-extrabold tracking-tight leading-none md:text-4xl lg:text-5xl xl:text-6xl object-cover visible sm:block">
         Top-Tier Style Curation
       </h1>
       <p className="mt-4 text-gray-500 text-lg lg:text-xl">
