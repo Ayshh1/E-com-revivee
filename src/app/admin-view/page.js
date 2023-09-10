@@ -73,7 +73,7 @@ export default function AdminView() {
     <section>
       <div className="mx-auto px-4 sm:px-6 lg:px-8 sm:object-cover sm:visible text-black ">
         <div>
-          <div className="px-4 py-6 sm:px-8 sm:py-10 sm:object-cover sm:visible text-black">
+          <div className="px-4 py-6 sm:px-8 sm:py-10 sm:object-cover sm:visible text-black bg-white">
             <div className="flow-root">
               {allOrdersForAllUsers && allOrdersForAllUsers.length ? (
                 <ul className="flex flex-col gap-4 sm:object-cover sm:visible text-black">
