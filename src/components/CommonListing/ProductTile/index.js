@@ -7,7 +7,7 @@ export default function ProductTile({ item }) {
   
   return (
     <div  onClick={()=> router.push(`/product/${item._id}`)}>
-      <div className="overflow-hideen aspect-w-1 aspect-h-1 h-52 hover:shadow-lg">
+      <div className="overflow-hideen aspect-w-1 aspect-h-1 h-52 hover:shadow-lg sm:object-cover sm:visible text-black">
         <img
           src={item.imageUrl}
           alt="Product image"
@@ -15,16 +15,16 @@ export default function ProductTile({ item }) {
         />
       </div>
       {item.onSale === "yes" ? (
-        <div className="absolute top-0 m-2 rounded-full bg-black">
-          <p className="rounded-full  p-1 text-[8px] font-bold uppercase tracking-wide text-white sm:py-1 sm:px-3">
+        <div className="absolute top-0 m-2 rounded-full bg-black ">
+          <p className="rounded-full  p-1 text-[8px] font-bold uppercase tracking-wide text-white sm:py-1 sm:px-3 sm:object-cover sm:visible text-black">
             Sale
           </p>
         </div>
       ) : null}
-      <div className="my-4 mx-auto flex w-10/12 flex-col items-start justify-between">
+      <div className="my-4 mx-auto flex w-10/12 flex-col items-start justify-between sm:object-cover sm:visible text-black">
         <div className="mb-2 flex">
           <p
-            className={`mr-3 text-sm font-semibold ${
+            className={`mr-3 text-sm font-semibold sm:object-cover sm:visible text-black ${
               item.onSale === "yes" ? "line-through" : ""
             }`}
           >{`$ ${item.price}`}</p>
