@@ -65,7 +65,7 @@ export async function POST(req) {
     } else {
       return NextResponse.json({
         success: false,
-        message: "You are not authenticated",
+        message: "You are not authenticated ! Kindly login first",
       });
     }
   } catch (e) {
