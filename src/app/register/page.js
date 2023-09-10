@@ -88,7 +88,7 @@ export default function Register() {
                   Login
                 </button>
               ) : (
-                <div className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8">
+                <div className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8 sm:visible sm:object-cover sm:text-black">
                   {registrationFormControls.map((controlItem) =>
                     controlItem.componentType === "input" ? (
                       <InputComponent
