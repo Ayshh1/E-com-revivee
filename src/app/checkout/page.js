@@ -169,7 +169,7 @@ export default function Checkout() {
           <div className="mx-auto mt-8 max-w-screen-xl px-4 sm:px-6 lg:px-8 ">
             <div className="bg-white shadow">
               <div className="px-4 py-6 sm:px-8 sm:py-10 flex flex-col gap-5">
-                <h1 className="font-bold text-lg">
+                <h1 className="font-bold text-lg sm:object-cover sm:visible text-black">
                   Your payment is successfull and you will be redirected to
                   orders page in 2 seconds !
                 </h1>
@@ -198,40 +198,40 @@ export default function Checkout() {
     <div>
       <div className="grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32">
         <div className="px-4 pt-8">
-          <p className="font-medium text-xl">Cart Summary</p>
-          <div className="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-5">
+          <p className="font-medium text-xl sm:object-cover sm:visible text-black">Cart Summary</p>
+          <div className="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-5 sm:object-cover sm:visible text-black">
             {cartItems && cartItems.length ? (
               cartItems.map((item) => (
                 <div
-                  className="flex flex-col rounded-lg bg-white sm:flex-row"
+                  className="flex flex-col rounded-lg bg-white sm:flex-row sm:object-cover sm:visible text-black"
                   key={item._id}
                 >
                   <img
                     src={item && item.productID && item.productID.imageUrl}
                     alt="Cart Item"
-                    className="m-2 h-24 w-28 rounded-md border object-cover object-center"
+                    className="m-2 h-24 w-28 rounded-md border object-cover object-center sm:object-cover sm:visible text-black"
                   />
                   <div className="flex w-full flex-col px-4 py-4">
-                    <span className="font-bold">
+                    <span className="font-bold sm:object-cover sm:visible text-black">
                       {item && item.productID && item.productID.name}
                     </span>
-                    <span className="font-semibold">
+                    <span className="font-semibold sm:object-cover sm:visible text-black">
                       {item && item.productID && item.productID.price}
                     </span>
                   </div>
                 </div>
               ))
             ) : (
-              <div>Your cart is empty</div>
+              <div className="sm:object-cover sm:visible text-black">Your cart is empty</div>
             )}
           </div>
         </div>
-        <div className="mt-10 bg-gray-50 px-4 pt-8 lg:mt-0">
-          <p className="text-xl font-medium">Shipping address details</p>
-          <p className="text-gray-400 font-bold">
+        <div className="mt-10 bg-gray-50 px-4 pt-8 lg:mt-0 sm:object-cover sm:visible text-black">
+          <p className="text-xl font-medium sm:object-cover sm:visible text-black">Shipping address details</p>
+          <p className="text-gray-400 font-bold sm:object-cover sm:visible text-black">
             Complete your order by selecting address below
           </p>
-          <div className="w-full mt-6 mr-0 mb-0 ml-0 space-y-6">
+          <div className="w-full mt-6 mr-0 mb-0 ml-0 space-y-6 sm:object-cover sm:visible text-black">
             {addresses && addresses.length ? (
               addresses.map((item) => (
                 <div
@@ -246,7 +246,7 @@ export default function Checkout() {
                   <p>City : {item.city}</p>
                   <p>Country : {item.country}</p>
                   <p>PostalCode : {item.postalCode}</p>
-                  <button className="mt-5 mr-5 inline-block bg-black rounded-lg text-white px-5 py-3 text-xs font-medium uppercase tracking-wide  hover:bg-gray-700 transition-all ease-in-out">
+                  <button className="sm:object-cover sm:visible mt-5 mr-5 inline-block bg-black rounded-lg text-white px-5 py-3 text-xs font-medium uppercase tracking-wide  hover:bg-gray-700 transition-all ease-in-out">
                     {item._id === selectedAddress
                       ? "Selected Address"
                       : "Select Address"}
@@ -265,8 +265,8 @@ export default function Checkout() {
           </button>
           <div className="mt-6 border-t border-b py-2">
             <div className="flex items-center justify-between">
-              <p className="text-sm font-medium text-gray-900">Subtotal</p>
-              <p className="text-lg font-bold text-gray-900">
+              <p className="text-sm font-medium text-gray-900 sm:object-cover sm:visible text-black">Subtotal</p>
+              <p className="text-lg font-bold text-gray-900 sm:object-cover sm:visible text-black">
                 $
                 {cartItems && cartItems.length
                   ? cartItems.reduce(
@@ -277,7 +277,7 @@ export default function Checkout() {
               </p>
             </div>
             <div className="flex items-center justify-between">
-              <p className="text-sm font-medium text-gray-900">Shipping</p>
+              <p className="text-sm font-medium text-gray-900 ">Shipping</p>
               <p className="text-lg font-bold text-gray-900">Free</p>
             </div>
             <div className="flex items-center justify-between">
